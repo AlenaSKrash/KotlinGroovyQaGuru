@@ -1,0 +1,53 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.0.21'
+    id 'io.qameta.allure' version '3.0.0'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    agent {
+        canBeResolved = true
+        canBeConsumed = true
+    }
+}
+
+//Sorry, had to add this to avoid conflicts between my IDE and Kotlin
+configurations.configureEach {
+    resolutionStrategy.eachDependency { details ->
+        if (details.requested.group == "org.jetbrains.kotlin") {
+            details.useVersion("2.0.21")
+        }
+    }
+}
+
+dependencies {
+    // Frontend (usually used in tests; keep as testImplementation unless you really need it in main)
+    testImplementation "com.codeborne:selenide:7.14.0"
+
+    // JUnit (test-only)
+    testImplementation "org.junit.jupiter:junit-jupiter:6.0.2"
+
+    // Kotest assertions (Kotlin 2.0.x friendly -> use 5.x)
+    testImplementation "io.kotest:kotest-assertions-core-jvm:5.9.1"
+
+    // Allure
+    agent "org.aspectj:aspectjweaver:1.9.22"
+    testImplementation "io.qameta.allure:allure-junit5:2.32.0"
+    testImplementation "org.aspectj:aspectjweaver:1.9.22"
+}
+
+test {
+    useJUnitPlatform {
+        if (System.getProperty("TAGS")) {
+            includeTags System.getProperty("TAGS")
+        }
+    }
+
+    systemProperties(System.getProperties())
+}
