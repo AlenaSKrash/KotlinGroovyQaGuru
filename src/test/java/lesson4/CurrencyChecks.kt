@@ -7,18 +7,15 @@ fun isCurrencyAvailableToSpend(currencyAmount: CurrencyAmount) {
 }
 
 fun replaceTheFieldIfNull(currencyAmount: CurrencyAmount): CurrencyAmount {
-
     return currencyAmount.copy(
         name = currencyAmount.name ?: run {
             println("Название валюты не указано. Используем значение по умолчанию")
             "Unknown"
         },
-
         symbol = currencyAmount.symbol ?: run {
             println("Символ валюты не указан. Используем значение по умолчанию")
             '?'
         },
-
         availableToSpend = currencyAmount.availableToSpend ?: run {
             println("Доступное количество валюты не указано. Используем значение по умолчанию")
             0
