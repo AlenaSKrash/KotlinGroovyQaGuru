@@ -1,9 +1,9 @@
 package lesson4
 
-fun isCurrencyAvailableToSpend(currencyAmount: CurrencyAmount) {
-    currencyAmount.availableToSpend?.let {
-        println("You've got $it${currencyAmount.symbol} ${currencyAmount.name} available to spend")
-    } ?: println("The remaining amount of ${currencyAmount.name} is unknown")
+fun isCurrencyAvailableToSpend(currencyAmount: CurrencyAmount): String {
+    return currencyAmount.availableToSpend?.let {
+        "You've got $it${currencyAmount.symbol} ${currencyAmount.name} available to spend"
+    } ?: "The remaining amount of ${currencyAmount.name} is unknown"
 }
 
 fun replaceTheFieldIfNull(currencyAmount: CurrencyAmount): CurrencyAmount {

@@ -8,6 +8,8 @@ class TestCurrencyAmountCheck {
     private val unknownString = "Unknown"
     private val questionChar = '?'
     private val zero = 0
+    private val unknownAmount = "The remaining amount of rubles is unknown"
+    private val dollarsAmount = "You've got 10000000$ dollars available to spend"
 
     private val rubles = CurrencyAmount("rubles", '₽', null)
     private val dollars = CurrencyAmount("dollars", '$', 10000000)
@@ -16,13 +18,17 @@ class TestCurrencyAmountCheck {
     @Test
     @DisplayName("Проверка кол-ва рублей на счете")
     fun checkTheAmountOfRubles() {
-        isCurrencyAvailableToSpend(rubles)
+        val result = isCurrencyAvailableToSpend(rubles)
+
+        result shouldBe unknownAmount
     }
 
     @Test
     @DisplayName("Проверка кол-ва долларов на счете")
     fun checkTheAmountOfDollars() {
-        isCurrencyAvailableToSpend(dollars)
+        val result = isCurrencyAvailableToSpend(dollars)
+
+        result shouldBe dollarsAmount
     }
 
     @Test
