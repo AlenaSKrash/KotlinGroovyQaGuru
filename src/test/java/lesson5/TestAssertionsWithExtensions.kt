@@ -19,7 +19,7 @@ class TestAssertionsWithExtensions {
     }
 
     @Test
-    @DisplayName("Валидация номера телефона infix")
+    @DisplayName("Валидация  номера телефона infix")
     fun checkIfPhoneNumberIsValidInfix() {
         phoneNumber shouldBeValidPhoneNumber true
     }
