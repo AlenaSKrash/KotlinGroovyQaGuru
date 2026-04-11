@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test
 @Feature("Some creative name for a feature")
 @Story("Some creative name for a story")
 @Tags(Tag("Smoke"), Tag("Do not smoke"))
-class TestCheckMassiveIsEmpty {
+class TestAssertionsWithExtensionsCheckMassiveIsEmpty {
 
     private val arrayForTest: Array<String>? = null
 
