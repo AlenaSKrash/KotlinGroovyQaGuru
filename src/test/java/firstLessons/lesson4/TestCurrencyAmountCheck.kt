@@ -1,4 +1,4 @@
-package lesson4
+package firstLessons.lesson4
 
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.DisplayName

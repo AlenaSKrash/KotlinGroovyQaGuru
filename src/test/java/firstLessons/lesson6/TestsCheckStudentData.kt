@@ -1,4 +1,4 @@
-package lesson6
+package firstLessons.lesson6
 
 import io.kotest.matchers.shouldNotBe
 import org.junit.jupiter.api.DisplayName

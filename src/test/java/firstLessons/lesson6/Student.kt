@@ -1,4 +1,4 @@
-package lesson6
+package firstLessons.lesson6
 
 val defaultStudent = Student(firstName = null, lastName = null, year = 0, isFullyFunded = null)
 

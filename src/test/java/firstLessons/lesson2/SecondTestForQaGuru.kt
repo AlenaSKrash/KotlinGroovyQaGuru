@@ -1,4 +1,4 @@
-package lesson2
+package firstLessons.lesson2
 
 import io.kotest.matchers.string.shouldNotContain
 import io.qameta.allure.Feature

@@ -1,9 +1,9 @@
-package lesson5
+package firstLessons.lesson5
 
 import io.kotest.matchers.shouldBe
-import lesson5.AssertionsWithExtensions.Companion.containsDigitsWithOptionalPlus
-import lesson5.AssertionsWithExtensions.Companion.hasLengthIn10To15
-import lesson5.AssertionsWithExtensions.Companion.shouldBeValidPhoneNumber
+import firstLessons.lesson5.AssertionsWithExtensions.Companion.containsDigitsWithOptionalPlus
+import firstLessons.lesson5.AssertionsWithExtensions.Companion.hasLengthIn10To15
+import firstLessons.lesson5.AssertionsWithExtensions.Companion.shouldBeValidPhoneNumber
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 

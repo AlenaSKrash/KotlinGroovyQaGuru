@@ -1,4 +1,4 @@
-package lesson4
+package firstLessons.lesson4
 
 fun isCurrencyAvailableToSpend(currencyAmount: CurrencyAmount): String {
     return currencyAmount.availableToSpend?.let {

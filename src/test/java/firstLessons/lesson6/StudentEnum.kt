@@ -1,4 +1,4 @@
-package lesson6
+package firstLessons.lesson6
 
 enum class StudentEnum(
     val studentName: String,

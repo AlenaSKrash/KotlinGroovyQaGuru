@@ -1,4 +1,4 @@
-package lesson4
+package firstLessons.lesson4
 
 data class CurrencyAmount(
     val name: String?,

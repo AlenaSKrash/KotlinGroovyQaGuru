@@ -1,6 +1,6 @@
-package lesson2
+package firstLessons.lesson3
 
-import io.kotest.matchers.shouldBe
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.qameta.allure.Feature
 import io.qameta.allure.Story
 import org.junit.jupiter.api.DisplayName
@@ -11,15 +11,15 @@ import org.junit.jupiter.api.Test
 @Feature("Some creative name for a feature")
 @Story("Some creative name for a story")
 @Tags(Tag("Smoke"), Tag("Do not smoke"))
-class FirstTestForQaGuru {
+class TestCheckMassiveIsNotEmpty {
 
-    private val firstPartOfTheName = "Alena"
-    private val secondPartOfTheName = "Avila"
-    private val expectedFullName = "AlenaAvila"
+    private val arrayForTest = arrayOf("Alena", "Angela")
 
     @Test
     @DisplayName("Some creative displayName")
     fun test() {
-        firstPartOfTheName + secondPartOfTheName shouldBe expectedFullName
+        arrayForTest.shouldNotBeNull()
+
+        //Но как-то выглядит как ненужная проверка, можно через nullSafety задать условия, что массив по дефолту не null
     }
 }

@@ -1,4 +1,4 @@
-package lesson5
+package firstLessons.lesson5
 
 import io.kotest.assertions.fail
 import io.kotest.matchers.shouldBe
